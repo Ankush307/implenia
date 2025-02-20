@@ -20,6 +20,7 @@
 
 * {
   font-family: "Source Sans 3", serif;
+  scroll-behavior: smooth;
 }
 
 .text-shadow {
