@@ -4,14 +4,22 @@ interface StoriesItem {
     cardBoxClass: string;
     boxContent: string;
 }
-interface KickBoxCardItem {
-    image: string;
+
+interface HeaderItem {
     title: string;
-    titleClass: string;
-    heading: string;
-    descriptionOne: string;
-    descriptionTwo: string;
+    link: string;
 }
+
+interface KickBoxItem {
+    image: string;
+    imageAlt: string;
+    subTitle: string;
+    title: string;
+    description: string;
+    boxDuration: string;
+    budget: string;
+}
+
 interface CommunityItem {
     heading: string;
     profile: string;
@@ -27,8 +35,12 @@ interface FooterItem {
     link: string;
 }
 
+interface kickBoxList {
+    description: string;
+}
 
-export const HEADER_LIST = [
+
+export const HEADER_LIST: HeaderItem[] = [
     {
         title: "Home",
         link: "#home",
@@ -47,7 +59,7 @@ export const HEADER_LIST = [
     },
 
 ];
-export const KICKBOX_LIST = [
+export const KICKBOX_LIST: kickBoxList[] = [
     {
         description: "Ideas submitted",
     },
@@ -58,7 +70,7 @@ export const KICKBOX_LIST = [
         description: "Community Members",
     }
 ];
-export const KICKBOX_PROCESS_LIST = [
+export const KICKBOX_PROCESS_LIST: KickBoxItem[] = [
     {
         image: "/assets/images/webp/red-kickbox.webp",
         imageAlt: "red-kickbox",

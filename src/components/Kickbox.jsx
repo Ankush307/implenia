@@ -23,7 +23,7 @@ const Kickbox = () => {
                         {KICKBOX_LIST.map((item, i) => (
                             <div key={i} className="flex xl:w-4/12 flex-col max-lg:items-center max-lg:justify-center" >
                                 <p className="text-[40px] lg:text-[80px] md:text-[60px] leading-[100%] tracking-[-0.66px] text-yellow">+
-                                    <CountUp start={0} end={count && i === 0 ? 155 : count && i === 1 ? 325 : count && i === 2 ? 250 : 0} duration={3} />
+                                    <CountUp start={0} end={count ? [155, 325, 250][i] || 0 : 0} duration={3} />
                                 </p>
                                 <p className="md:text-[21px] font-bold leading-[21px]">{item.description} </p>
                             </div>
