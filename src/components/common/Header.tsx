@@ -1,25 +1,14 @@
 "use client";
 import { HEADER_LIST } from "@/utils/helper";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const Header = () => {
     const [open, setOpen] = useState(false);
-
     useEffect(() => {
-        const handleOverflow = () => {
-            if (open && window.innerWidth < 780) {
-                document.body.classList.add("overflow-hidden");
-            } else {
-                document.body.classList.remove("overflow-hidden");
-            }
-        };
-        handleOverflow();
-        window.addEventListener("resize", handleOverflow);
-        return () => {
-            window.removeEventListener("resize", handleOverflow);
-        };
-    }, [open]);
+        document.body.style.overflow = open ? "hidden" : "auto";
+    },[open])
 
     return (
         <div className="pb-[19px] pt-[18px] max-lg:py-4 shadow-[0px_4px_8px_0px#00000040] bg-white">
@@ -28,7 +17,7 @@ const Header = () => {
                 <div className={`flex max-md:gap-10 max-md:fixed max-md:top-0 max-md:-right-full max-md:h-full max-md:w-full max-md:justify-center max-md:items-center transition-all duration-300 max-md:flex-col max-md:bg-white max-md:!z-20 ${open ? "max-md:!right-0" : ""}`}>
                     <div className="flex max-md:flex-col items-center gap-[38px]">
                         {HEADER_LIST.map((item, i) => (
-                            <a key={i} onClick={() => setOpen(false)} href={item.link} className="font-bold text-base max-md:text-xl !whitespace-nowrap leading-5 hover:text-custom-gold duration-300 ease-linear transition-all">{item.title}</a>
+                            <Link key={i} onClick={() => setOpen(false)} href={item.link} className={`font-bold text-base max-md:text-xl !whitespace-nowrap leading-5 duration-300 ease-linear transition-all`}>{item.title}</Link>
                         ))}
                     </div>
                 </div>

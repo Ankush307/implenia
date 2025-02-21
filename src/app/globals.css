@@ -3,21 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Source Sans Pro', sans-serif;
-  src: url('/public/assets/fonts/SourceSansPro-Bold.otf');
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url('/public/assets/fonts/SourceSansPro-Light.otf');
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url('/public/assets/fonts/SourceSansPro-Regular.otf');
-}
-
 * {
   font-family: "Source Sans 3", serif;
   scroll-behavior: smooth;
@@ -38,5 +23,22 @@
 
   100% {
     left: 0px;
+  }
+}
+
+@media (min-width : 1024.98px) {
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-slide {
+    padding-bottom: 0px;
+  }
+}
+
+
+@media (max-width: 639.98px) {
+  .bg-hero-mobile {
+    background-position: right -100px center;
   }
 }

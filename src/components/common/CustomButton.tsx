@@ -1,13 +1,16 @@
 import React from "react";
 
-interface CustomButtonProps {
-    text: string;
+interface buttonData {
+    text?: string;
     myClass?: string;
 }
-
-const CustomButton: React.FC<CustomButtonProps> = ({ text, myClass }) => {
+const CustomButton = ({ myClass, text }: buttonData) => {
     return (
-        <button className={`${myClass} font-bold text-[21px] leading-[21px] rounded-[47px] transition-all duration-300`}>{text}</button>
+        <button
+            className={`border-2 rounded-full text-custom-2xl leading-custom-xs duration-300 ease-linear ${myClass}`}
+        >
+            {text}
+        </button>
     );
 };
 

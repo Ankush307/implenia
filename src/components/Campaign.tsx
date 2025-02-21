@@ -7,7 +7,7 @@ const Campaign = () => {
     const [showVideo, setShowVideo] = useState(false)
 
     return (
-        <div className="bg-gray">2
+        <div className="bg-gray">
             <div className='container mx-auto max-w-[1146px] lg:pt-32 lg:pb-36 md:py-20 py-16 max-xl:px-5'>
                 <CustomHeading text="HOW IT WORKS" myClass="pb-[64px] max-md:pb-10 max-sm:pb-5" />
                 <div className={`w-full max-w-[1064px] mx-auto max-h-[580px] relative ${showVideo ? 'hidden' : ''}`}>

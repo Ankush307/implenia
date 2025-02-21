@@ -24,7 +24,7 @@ const ImpleniaBox = () => {
                         </div>
                     ))}
                 </div>
-                <CustomButton text="Start your RedBox!" myClass="text-light-red h-[56px] w-[268px] !border-2 border-light-red hover:bg-light-red hover:text-white max-md:mt-4 max-sm:mt-2 max-md:w-[220px] max-md:text-lg mt-[39px] ml-[39px] "  />
+                <CustomButton myClass="text-light-red border-light-red py-4 px-8 min-w-[268px] font-bold hover:bg-light-red hover:text-white mt-[39px] ml-5 max-lg:text-center max-lg:ml-0 max-lg:mt-6" text="More Stories"/>
             </div>
         </div>
     )
