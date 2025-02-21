@@ -12,7 +12,7 @@ const Hero = () => {
                 <h1 className='max-w-[575px] pt-2 lg:text-[76px] md:text-[60px] text-[48px] font-bold lg:leading-[80px] md:leading-[60px] leading-[40px] pb-[25px] z-10 relative text-shadow '>WE ARE LOOKING FOR YOUR IDEA</h1>
                 <CustomButton text="Bring your idea to life!" myClass="p-[21px_44px] xl:min-w-[312px] border-2 border-white text-white font-bold font-sans-bold max-lg:p-[15.5px_32px] hover:bg-black hover:border-black relative max-xl:z-10 "/>
             </div>
-            <Image className='robot robot-animation pointer-events-none absolute md:top-[33%] top-[61%] xl:w-[375px] xl:h-[548px] md:size-[290px] w-[150px] h-[200px]' height={562} width={390} src="/assets/images/webp/hero-robot.webp" alt='robot img'></Image>
+            <Image className='robot robot-animation pointer-events-none absolute md:top-[33%] top-[61%] xl:w-[375px] xl:h-[548px] md:size-[290px] w-[150px] h-[200px]' height={562} width={390} src="/assets/images/webp/hero-robot.webp" alt='robot img'/>
         </div>
     )
 }
