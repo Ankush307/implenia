@@ -6,9 +6,10 @@ import React, { useEffect, useState } from "react";
 
 const Header = () => {
     const [open, setOpen] = useState(false);
+    const [active, setActive] = useState<Number | null>(0);
     useEffect(() => {
         document.body.style.overflow = open ? "hidden" : "auto";
-    },[open])
+    }, [open])
 
     return (
         <div className="pb-[19px] pt-[18px] max-lg:py-4 shadow-[0px_4px_8px_0px#00000040] bg-white">
@@ -17,7 +18,7 @@ const Header = () => {
                 <div className={`flex max-md:gap-10 max-md:fixed max-md:top-0 max-md:-right-full max-md:h-full max-md:w-full max-md:justify-center max-md:items-center transition-all duration-300 max-md:flex-col max-md:bg-white max-md:!z-20 ${open ? "max-md:!right-0" : ""}`}>
                     <div className="flex max-md:flex-col items-center gap-[38px]">
                         {HEADER_LIST.map((item, i) => (
-                            <Link key={i} onClick={() => setOpen(false)} href={item.link} className={`font-bold text-base max-md:text-xl !whitespace-nowrap leading-5 duration-300 ease-linear transition-all`}>{item.title}</Link>
+                            <Link onClick={() => { setOpen(false); setActive(active === i ? null : i); }}key={i} href={item.link} className={`text-base transition-all duration-300 tracking-[0.28px] max-sm:text-lg hover:text-orange font-bold leading-[20.11px] ${active === i ? "text-orange" : "text-black"}`} >{item.title}</Link>
                         ))}
                     </div>
                 </div>

@@ -4,6 +4,14 @@ interface StoriesItem {
     cardBoxClass: string;
     boxContent: string;
 }
+interface KickBoxCardItem {
+    image: string;
+    title: string;
+    titleClass: string;
+    heading: string;
+    descriptionOne: string;
+    descriptionTwo: string;
+}
 interface CommunityItem {
     heading: string;
     profile: string;

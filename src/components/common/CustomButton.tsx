@@ -7,7 +7,7 @@ interface buttonData {
 const CustomButton = ({ myClass, text }: buttonData) => {
     return (
         <button
-            className={`border-2 rounded-full text-custom-2xl leading-custom-xs duration-300 ease-linear ${myClass}`}
+            className={` text-nowrap font-bold text-customXl leading-[21px] transition-all duration-300 border-2 rounded-[47px] max-md:px-6 max-md:py-3 max-md:font-medium max-sm:text-lg max-sm:px-4 max-sm:py-1 ${myClass}`}
         >
             {text}
         </button>
